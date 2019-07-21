@@ -3,6 +3,28 @@
     "name": "${app_name}",
     "image": "${app_image_repository}:${app_image_version}",
     "essential": true,
+     "environment": [
+      {
+        "name": "PGHOST",
+        "value": "${pghost}"
+      },
+      {
+        "name": "PGDATABASE",
+        "value": "${pgdatabase}"
+      },
+      {
+        "name": "PGUSER",
+        "value": "${pguser}"
+      },
+      {
+        "name": "PGPASSWORD",
+        "value": "${pgpassword}"
+      },
+      {
+        "name": "PGSSLMODE",
+        "value": "${pgsslmode}"
+      }
+    ],
 
     "portMappings": [
       {
